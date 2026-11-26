@@ -1,0 +1,363 @@
+/* JSD Global Design System */
+
+:root {
+    --jsd-olive: #25291F;
+    --jsd-gold: #C5A253;
+    --jsd-page-bg: #F5F5F0;
+    --jsd-card-bg: #FFFFFF;
+    --jsd-soft-bg: #FAFAF7;
+    --jsd-border: #E6E7E1;
+    --jsd-text: #30332C;
+    --jsd-muted: #777B72;
+    --jsd-success: #398568;
+    --jsd-warning: #C5A253;
+    --jsd-danger: #C45B55;
+    --jsd-info: #64849A;
+    --jsd-font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--jsd-font-family) !important;
+}
+
+body {
+    background-color: var(--jsd-page-bg);
+    color: var(--jsd-text);
+}
+
+.page-title,
+h1,
+h2,
+h3 {
+    color: var(--jsd-olive);
+}
+
+.frappe-card,
+.widget,
+.form-section {
+    border-color: var(--jsd-border);
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: var(--jsd-olive);
+    border-color: var(--jsd-olive);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #353B2D;
+    border-color: #353B2D;
+}
+
+.form-control {
+    border-color: var(--jsd-border);
+    border-radius: 7px;
+}
+
+.form-control:focus {
+    border-color: var(--jsd-gold);
+    box-shadow: 0 0 0 2px rgba(197, 162, 83, 0.15);
+}
+
+.table {
+    --border-color: var(--jsd-border);
+}
+
+a {
+    color: var(--jsd-olive);
+}
+
+a:hover {
+    color: var(--jsd-gold);
+}
+
+/* JSD Frappe token overrides */
+:root { --btn-primary: #25291F; }
+
+[data-theme="light"] { --btn-primary: #25291F; }
+
+html[data-theme="light"] { --btn-primary: #25291F !important; }
+
+/* JSD - Main Workspace */
+html[data-theme="light"] .layout-main-section,
+html[data-theme="light"] .page-container {
+    background-color: var(--jsd-page-bg) !important;
+}
+
+html[data-theme="light"] .page-head {
+    background-color: var(--jsd-page-bg) !important;
+    border-bottom: 1px solid var(--jsd-border);
+}
+
+html[data-theme="light"] .widget,
+html[data-theme="light"] .dashboard-widget-box,
+html[data-theme="light"] .number-widget-box {
+    background-color: var(--jsd-card-bg) !important;
+    border: 1px solid var(--jsd-border);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(37, 41, 31, 0.04);
+}
+
+
+/* JSD Sidebar Design */
+
+.body-sidebar {
+    background: #25291F !important;
+    border-right: 1px solid #353B2D;
+}
+
+.body-sidebar-top {
+    background: #25291F !important;
+}
+
+.standard-sidebar-item {
+    margin: 4px 10px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.standard-sidebar-item .item-anchor {
+    color: #E8E8E3 !important;
+    border-radius: 8px;
+}
+
+.standard-sidebar-item:hover {
+    background: #353B2D !important;
+}
+
+.standard-sidebar-item.active-sidebar {
+    background: rgba(197, 162, 83, 0.16) !important;
+    border-left: 3px solid #C5A253;
+}
+
+.standard-sidebar-item.active-sidebar .item-anchor,
+.standard-sidebar-item.active-sidebar .sidebar-item-label {
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.standard-sidebar-item .sidebar-item-icon {
+    color: #C5A253;
+}
+
+
+/* JSD Sidebar Header */
+.body-sidebar .header-title { color: #C5A253 !important; font-weight: 700; }
+
+/* JSD Navbar and Breadcrumbs */
+.page-title {
+    background: var(--jsd-page-bg) !important;
+    border-bottom: 1px solid var(--jsd-border);
+}
+.navbar-breadcrumbs {
+    background: transparent !important;
+}
+.navbar-breadcrumbs .es-breadcrumbs__item {
+    color: var(--jsd-muted) !important;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+.navbar-breadcrumbs [aria-current="page"] {
+    color: var(--jsd-olive) !important;
+    font-weight: 600;
+}
+.navbar-breadcrumbs a:hover {
+    color: var(--jsd-gold) !important;
+}
+
+/* JSD - Olive Gradient Navigation */
+
+/* Slim Left Dock */
+#desk-dock {
+    background: linear-gradient(180deg, #25291F 0%, #30382A 100%) !important;
+    border-right: 1px solid rgba(197, 162, 83, 0.18) !important;
+}
+
+#desk-dock .dock-logo,
+#desk-dock .dock-utilities,
+#desk-dock .dock-items,
+#desk-dock .dock-user {
+    background: transparent !important;
+}
+
+#desk-dock .dock-item {
+    color: #F5F3EA !important;
+}
+
+#desk-dock .dock-item-icon {
+    color: #C5A253 !important;
+}
+
+#desk-dock .dock-item:hover {
+    background: rgba(197, 162, 83, 0.12) !important;
+}
+
+#desk-dock .dock-item.active {
+    background: linear-gradient(135deg, #D8BD78, #C5A253) !important;
+    color: #25291F !important;
+}
+
+#desk-dock .dock-item.active .dock-item-icon,
+#desk-dock .dock-item.active .dock-item-label {
+    color: #25291F !important;
+}
+
+/* Main Sidebar */
+.body-sidebar {
+    background: linear-gradient(160deg, #414936 0%, #30382A 55%, #25291F 100%) !important;
+    border-right: 1px solid rgba(197, 162, 83, 0.16) !important;
+}
+
+.body-sidebar-top {
+    background: transparent !important;
+}
+
+.body-sidebar .header-title {
+    color: #D8BD78 !important;
+}
+
+.body-sidebar .standard-sidebar-item .item-anchor {
+    color: #F5F3EA !important;
+}
+
+.body-sidebar .standard-sidebar-item .sidebar-item-icon {
+    color: #D8BD78 !important;
+}
+
+.body-sidebar .standard-sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.body-sidebar .standard-sidebar-item.active-sidebar {
+    background: linear-gradient(110deg, #D8BD78, #C5A253) !important;
+    border-left: 3px solid #A98536 !important;
+}
+
+.body-sidebar .standard-sidebar-item.active-sidebar .item-anchor,
+.body-sidebar .standard-sidebar-item.active-sidebar .sidebar-item-label,
+.body-sidebar .standard-sidebar-item.active-sidebar .sidebar-item-icon {
+    color: #25291F !important;
+}
+
+
+/* JSD - Replace ERPNext Logo with JSD Text */
+#desk-dock .dock-logo .header-logo img {
+    display: none !important;
+}
+
+#desk-dock .dock-logo .header-title {
+    font-size: 0 !important;
+}
+
+#desk-dock .dock-logo .header-title::after {
+    content: "JSD";
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #D8BD78;
+}
+
+/* JSD - White Dock Icons */
+#desk-dock .dock-item-icon,
+#desk-dock .dock-item-icon svg,
+#desk-dock .dock-item-icon svg use {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+
+/* JSD - Dock Brand Fix */
+#desk-dock .dock-logo .shell-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 60px;
+}
+
+#desk-dock .dock-logo .header-logo {
+    display: none !important;
+}
+
+#desk-dock .dock-logo .title-container {
+    display: block !important;
+}
+
+#desk-dock .dock-logo .header-title {
+    display: block !important;
+    font-size: 0 !important;
+    visibility: visible !important;
+}
+
+#desk-dock .dock-logo .header-title::after {
+    content: "JSD";
+    display: inline-block !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+    color: #D8BD78 !important;
+}
+
+
+/* JSD - Dock Logo Size and Alignment */
+#desk-dock .dock-logo .shell-header {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+#desk-dock .dock-logo .title-container {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+#desk-dock .dock-logo .header-title::after {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+}
+
+
+/* JSD - Antique Gold Workspace Headings */
+.layout-main-section .page-title,
+.layout-main-section h1,
+.layout-main-section h2,
+.layout-main-section h3,
+.layout-main-section .widget-title,
+.layout-main-section .widget-head .widget-title,
+.navbar-breadcrumbs [aria-current="page"] {
+    color: #A9823D !important;
+}
+
+
+/* JSD - Antique Gold Dashboard Widget Titles */
+.layout-main-section .widget-title {
+    color: #A9823D !important;
+}
+
+
+/* JSD - Permanent Antique Gold Widget Titles */
+html body .layout-main-section .widget .widget-head .widget-title,
+html body .layout-main-section .widget-title {
+    color: #A9823D !important;
+}
+
+html body .layout-main-section .widget-title span {
+    color: #A9823D !important;
+}
+
+
+/* JSD - Permanent Gold Widget Heading Text */
+html body .layout-main-section .widget-title .ellipsis {
+    color: #A9823D !important;
+}
+
+.widget-title .ellipsis {
+    color: #A9823D !important;
+}
